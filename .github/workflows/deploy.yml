@@ -13,13 +13,13 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
-      - name: Copiar arquivos para EC2 via SCP
+      - name: Copiar arquivos da app para EC2 via SCP
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "."
+          source: "app/*"
           target: "~/app-node"
           rm: true
 
