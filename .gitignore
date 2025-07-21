@@ -1,0 +1,10 @@
+# Ignorar a pasta de plugins e caches do Terraform
+.terraform/
+# Ignorar arquivos de estado
+*.tfstate
+*.tfstate.backup
+# Ignorar arquivos sensíveis e variáveis locais
+*.tfvars
+# Ignorar arquivos do sistema
+*.log
+.DS_Store
